@@ -7,12 +7,16 @@ import (
 	"strconv"
 
 	"github.com/brpratt/aoc2022/day01"
+	"github.com/brpratt/aoc2022/day02"
+	"github.com/brpratt/aoc2022/day03"
 )
 
 type Solution func(io.Reader) (string, string)
 
 var solutions = []Solution{
 	day01.Solve,
+	day02.Solve,
+	day03.Solve,
 }
 
 func ExitWithUsage() {
@@ -48,5 +52,5 @@ func main() {
 
 	part1, part2 := solutions[day-1](input)
 
-	fmt.Printf("Part 1: %s\nPart 2: %s\n", part1, part2)
+	fmt.Printf("%s\n%s\n", part1, part2)
 }

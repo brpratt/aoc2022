@@ -1,10 +1,10 @@
-package day01_test
+package day02_test
 
 import (
 	"os"
 	"testing"
 
-	"github.com/brpratt/aoc2022/day01"
+	"github.com/brpratt/aoc2022/day02"
 )
 
 func TestSolveExample(t *testing.T) {
@@ -15,10 +15,10 @@ func TestSolveExample(t *testing.T) {
 
 	defer file.Close()
 
-	part1, part2 := day01.Solve(file)
+	part1, part2 := day02.Solve(file)
 
-	part1Expected := "24000"
-	part2Expected := "45000"
+	part1Expected := "15"
+	part2Expected := "12"
 
 	if part1 != part1Expected {
 		t.Errorf("[Part 1]: expected %s, got %s", part1Expected, part1)
@@ -37,10 +37,10 @@ func TestSolveActual(t *testing.T) {
 
 	defer file.Close()
 
-	part1, part2 := day01.Solve(file)
+	part1, part2 := day02.Solve(file)
 
-	part1Expected := "66616"
-	part2Expected := "199172"
+	part1Expected := "8890"
+	part2Expected := "10238"
 
 	if part1 != part1Expected {
 		t.Errorf("[Part 1]: expected %s, got %s", part1Expected, part1)
