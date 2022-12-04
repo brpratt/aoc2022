@@ -1,0 +1,10 @@
+{
+    "name": "aoc20222",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "remoteUser": "santa",
+    "extensions": [
+        "golang.go"
+    ]
+}
