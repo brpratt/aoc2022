@@ -2,29 +2,14 @@ package day04
 
 import (
 	"bufio"
+	"fmt"
 	"io"
 	"strconv"
-	"strings"
 )
 
 type interval struct {
 	min int
 	max int
-}
-
-func parseIntervals(input string) (int1 interval, int2 interval) {
-	s := strings.Split(input, ",")
-
-	nums1 := strings.Split(s[0], "-")
-	nums2 := strings.Split(s[1], "-")
-
-	int1.min, _ = strconv.Atoi(nums1[0])
-	int1.max, _ = strconv.Atoi(nums1[1])
-
-	int2.min, _ = strconv.Atoi(nums2[0])
-	int2.max, _ = strconv.Atoi(nums2[1])
-
-	return
 }
 
 func contains(int1, int2 interval) bool {
@@ -48,7 +33,10 @@ func Solve(input io.Reader) (string, string) {
 	for scanner.Scan() {
 		line := scanner.Text()
 
-		int1, int2 := parseIntervals(line)
+		var int1 interval
+		var int2 interval
+
+		fmt.Sscanf(line, "%d-%d,%d-%d", &int1.min, &int1.max, &int2.min, &int2.max)
 
 		if contains(int1, int2) {
 			partA += 1
