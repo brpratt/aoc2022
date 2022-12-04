@@ -9,6 +9,7 @@ import (
 	"github.com/brpratt/aoc2022/day01"
 	"github.com/brpratt/aoc2022/day02"
 	"github.com/brpratt/aoc2022/day03"
+	"github.com/brpratt/aoc2022/day04"
 )
 
 type Solution func(io.Reader) (string, string)
@@ -17,6 +18,7 @@ var solutions = []Solution{
 	day01.Solve,
 	day02.Solve,
 	day03.Solve,
+	day04.Solve,
 }
 
 func ExitWithUsage() {
